@@ -36,6 +36,8 @@ export default function Home() {
   }
 
   return (
+    <>
+
     <FlatList
       data={products}
       keyExtractor={(item) => item.id.toString()}
@@ -50,6 +52,13 @@ export default function Home() {
           <Text>₹ {item.price}</Text>
         </TouchableOpacity>
       )}
-    />
+      />
+          <TouchableOpacity
+  onPress={() => router.push("/cart")}
+  style={{ padding:10, backgroundColor:"#000", marginBottom:10 }}
+>
+  <Text style={{ color:"#fff", textAlign:"center" }}>Go to Cart</Text>
+</TouchableOpacity>
+      </>
   );
 }
