@@ -54,10 +54,10 @@ export default function Home() {
       )}
       />
           <TouchableOpacity
-  onPress={() => router.push("/cart")}
+  onPress={() => router.push("/orders")}
   style={{ padding:10, backgroundColor:"#000", marginBottom:10 }}
 >
-  <Text style={{ color:"#fff", textAlign:"center" }}>Go to Cart</Text>
+  <Text style={{ color:"#fff", textAlign:"center" }}>Go to orders</Text>
 </TouchableOpacity>
       </>
   );

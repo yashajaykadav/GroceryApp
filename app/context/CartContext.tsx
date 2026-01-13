@@ -7,6 +7,7 @@ export function CartProvider({ children }) {
 
   const addToCart = (product) => {
     const existing = cart.find((item) => item.id === product.id);
+  
 
     if (existing) {
       setCart(
@@ -33,6 +34,8 @@ export function CartProvider({ children }) {
     );
   };
 
+  const clearCart = () => setCart([]); 
+
   const decreaseQty = (id) => {
     setCart(
       cart.map((item) =>
@@ -45,7 +48,7 @@ export function CartProvider({ children }) {
 
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, increaseQty, decreaseQty }}
+      value={{ cart, addToCart, removeFromCart, increaseQty, decreaseQty,clearCart }}
     >
       {children}
     </CartContext.Provider>
